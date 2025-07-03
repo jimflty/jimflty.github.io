@@ -14,7 +14,7 @@
 <meta property="og:description" content="《王国：两位君主》是一款由Noio和Coatsink开发，Raw Fury发行的横向卷轴类策略建造游戏。玩家控制一位国王或女王，发展王国、雇佣居民、抵御夜间怪物攻击...">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-31T14:46:53.000Z">
-<meta property="article:modified_time" content="2025-07-03T14:53:35.057Z">
+<meta property="article:modified_time" content="2025-07-03T16:28:19.732Z">
 <meta property="article:author" content="Jimflty">
 <meta property="article:tag" content="游戏拆解">
 <meta name="twitter:card" content="summary">
@@ -99,81 +99,79 @@
         <h2 id="一、游戏概述"><a href="#一、游戏概述" class="headerlink" title="一、游戏概述"></a>一、游戏概述</h2><p>​	《王国：两位君主》是一款由Noio和Coatsink开发，Raw Fury发行的横向卷轴类策略建造游戏。玩家控制一位国王或女王，发展王国、雇佣居民、抵御夜间怪物攻击，并逐步拓展统治范围。本作是《Kingdom》系列的第三部作品，延续了系列一贯的极简操作与高策略深度相结合的设计理念。</p>
 <hr>
 <h2 id="二、核心玩法结构"><a href="#二、核心玩法结构" class="headerlink" title="二、核心玩法结构"></a>二、核心玩法结构</h2><h3 id="1-操作机制"><a href="#1-操作机制" class="headerlink" title="1. 操作机制"></a>1. 操作机制</h3><ul>
-<li>玩家仅使用<strong>方向键</strong>移动，<strong>交互键</strong>进行建造、招募等操作。</li>
-<li>强调<strong>极简交互</strong>与视觉反馈，弱引导设计贯穿始终。</li>
+<li>玩家仅使用WASD即可实现主角移动、建造、招募等操作。</li>
 </ul>
 <h3 id="2-游戏目标"><a href="#2-游戏目标" class="headerlink" title="2. 游戏目标"></a>2. 游戏目标</h3><ul>
 <li>建设与防御：发展王国基础设施，抵御夜间袭击。</li>
 <li>拓展与征服：探索地图，修复码头，征服新岛屿。</li>
-<li>生存与管理：合理分配资源，维持经济循环与士兵编制。</li>
+<li>生存与管理：合理分配人力，维持经济循环。</li>
 </ul>
-<h3 id="3-基础资源系统"><a href="#3-基础资源系统" class="headerlink" title="3. 基础资源系统"></a>3. 基础资源系统</h3><ul>
-<li><strong>金币</strong>：唯一通用资源，用于一切建造、招募、升级行为。</li>
+<h3 id="3-资源系统"><a href="#3-资源系统" class="headerlink" title="3. 资源系统"></a>3. 资源系统</h3><ul>
+<li><strong>金币</strong>：主要流通资源，用于一切建造、招募、升级行为。</li>
 <li><strong>时间与昼夜交替</strong>：昼间为发展与准备阶段，夜间为怪物进攻时间。</li>
 <li><strong>人力资源</strong>：流浪者通过金币招募成为村民，再分配为工人、弓箭手、骑士等职业。</li>
 </ul>
 <hr>
-<h2 id="三、系统与机制拆解"><a href="#三、系统与机制拆解" class="headerlink" title="三、系统与机制拆解"></a>三、系统与机制拆解</h2><h3 id="1-建设系统"><a href="#1-建设系统" class="headerlink" title="1. 建设系统"></a>1. 建设系统</h3><ul>
-<li><strong>防御设施</strong>：箭塔、围墙，分等级升级，强化防御范围与承伤能力。</li>
-<li><strong>功能建筑</strong>：铁匠铺、农田、马厩等，影响兵种、经济与骑乘方式。</li>
-<li><strong>中心建筑升级</strong>：城堡升级解锁更多建筑与功能，象征发展阶段。</li>
+<h2 id="三、系统与机制拆解"><a href="#三、系统与机制拆解" class="headerlink" title="三、系统与机制拆解"></a>三、系统与机制拆解</h2><h3 id="1-建筑系统"><a href="#1-建筑系统" class="headerlink" title="1. 建筑系统"></a>1. 建筑系统</h3><ul>
+<li><strong>防御建筑</strong>：箭塔、围墙，分等级升级，强化防御能力。</li>
+<li><strong>功能建筑</strong>：摊位、农田、马厩等，影响兵种、经济与骑乘方式。</li>
+<li><strong>大本营</strong>：升级大本营解锁更多士兵和银行，象征发展阶段。</li>
 </ul>
-<h3 id="2-职业与兵种系统"><a href="#2-职业与兵种系统" class="headerlink" title="2. 职业与兵种系统"></a>2. 职业与兵种系统</h3><ul>
-<li><strong>弓箭手</strong>：基础防御兵种，昼间狩猎获取金币。</li>
+<h3 id="2-职业系统"><a href="#2-职业系统" class="headerlink" title="2. 职业系统"></a>2. 职业系统</h3><ul>
+<li><strong>弓箭手</strong>：基础防御兵种，昼间狩猎夜晚在城墙后抵御进攻。</li>
 <li><strong>工人</strong>：负责建筑、修缮、砍树等任务。</li>
-<li><strong>骑士与士兵</strong>：高阶战斗单位，用于进攻传送门与岛屿。</li>
-<li><strong>特殊职业</strong>：如忍者、炸弹手等，随地图与剧情解锁。</li>
+<li><strong>士兵</strong>：强力战斗单位，可号令其进攻传送门。</li>
+<li><strong>特殊职业</strong>：如忍者、炸弹手等，随城土拓展与发现新建筑解锁。</li>
 </ul>
 <h3 id="3-怪物系统（贪婪族群）"><a href="#3-怪物系统（贪婪族群）" class="headerlink" title="3. 怪物系统（贪婪族群）"></a>3. 怪物系统（贪婪族群）</h3><ul>
 <li>来自传送门，于夜晚进攻王国。</li>
-<li>分为普通贪婪者、飞行贪婪者、巨型贪婪者等。</li>
-<li>会抢夺金币、装备，甚至王冠（失败判定条件）。</li>
+<li>可分为普通类（血量少，少数带盔甲）、飞行类（下落前难以攻击）、巨人（血量厚）等。</li>
+<li>会抢夺金币、装备，甚至王冠（决定游戏失败的关键）。</li>
 </ul>
 <h3 id="4-岛屿系统"><a href="#4-岛屿系统" class="headerlink" title="4. 岛屿系统"></a>4. 岛屿系统</h3><ul>
-<li>每张地图为一座岛屿，共有多张地图构成一个完整游戏进程。</li>
+<li>世界由多个岛屿构成，玩家需通过探索新大陆来拼凑完整地图。</li>
 <li>玩家可通过造船驶往新岛，保留部分单位与资源。</li>
-<li>各岛屿地形、资源点、敌人分布各异，强化重玩性与策略规划。</li>
+<li>各岛屿地形、资源点、传送门分布各异，强调可重玩性与策略规划。</li>
 </ul>
 <h3 id="5-合作系统"><a href="#5-合作系统" class="headerlink" title="5. 合作系统"></a>5. 合作系统</h3><ul>
-<li>本作新增双人合作机制，支持本地&#x2F;联机两人共治一国。</li>
-<li>双方可分工协作或分头行动，提升资源利用效率。</li>
+<li>本作新增多人合作机制，支持两人共玩，双方可分工协作，提升资源利用效率。</li>
 </ul>
 <hr>
-<h2 id="四、美术与音效风格"><a href="#四、美术与音效风格" class="headerlink" title="四、美术与音效风格"></a>四、美术与音效风格</h2><h3 id="1-像素风格"><a href="#1-像素风格" class="headerlink" title="1. 像素风格"></a>1. 像素风格</h3><ul>
-<li>采用精细像素美术，强化复古氛围与幻想风格结合。</li>
-<li>景深层次分明，采用动态光影与粒子效果表现昼夜变换与天气系统。</li>
+<h2 id="四、美术与音效"><a href="#四、美术与音效" class="headerlink" title="四、美术与音效"></a>四、美术与音效</h2><h3 id="1-像素风格"><a href="#1-像素风格" class="headerlink" title="1. 像素风格"></a>1. 像素风格</h3><ul>
+<li>采用精细像素美术，复古氛围与幻想风格相结合。</li>
+<li>景深层次分明，采用动态光影与粒子效果表现昼夜变换与环境更替。</li>
 </ul>
 <h3 id="2-UI-UX设计"><a href="#2-UI-UX设计" class="headerlink" title="2. UI&#x2F;UX设计"></a>2. UI&#x2F;UX设计</h3><ul>
 <li>UI极简主义：无过度装饰，仅在关键节点提供必要信息。</li>
 <li>视觉引导为主：通过角色行为、动画提示引导玩家进行互动。</li>
 </ul>
-<h3 id="3-音效与配乐"><a href="#3-音效与配乐" class="headerlink" title="3. 音效与配乐"></a>3. 音效与配乐</h3><ul>
+<h3 id="3-音效"><a href="#3-音效" class="headerlink" title="3. 音效"></a>3. 音效</h3><ul>
 <li>音效设计服务于游戏氛围，不干扰、不抢占注意力。</li>
 <li>配乐变化依照昼夜、事件等环境状态进行动态调整。</li>
 </ul>
 <hr>
-<h2 id="五、关卡与节奏设计"><a href="#五、关卡与节奏设计" class="headerlink" title="五、关卡与节奏设计"></a>五、关卡与节奏设计</h2><h3 id="1-节奏递进"><a href="#1-节奏递进" class="headerlink" title="1. 节奏递进"></a>1. 节奏递进</h3><ul>
+<h2 id="五、关卡与节奏"><a href="#五、关卡与节奏" class="headerlink" title="五、关卡与节奏"></a>五、关卡与节奏</h2><h3 id="1-递进式节奏"><a href="#1-递进式节奏" class="headerlink" title="1. 递进式节奏"></a>1. 递进式节奏</h3><ul>
 <li>游戏初期节奏缓慢，引导玩家适应资源与建筑系统。</li>
-<li>中期逐步引入更多敌人类型、岛屿探索要素。</li>
-<li>后期强调进攻与征服节奏，形成资源压迫与战略决策焦虑。</li>
+<li>中期发生血月，增加敌人数量并引入更多敌人类型，游戏节奏加快。</li>
+<li>后期强调进攻与征服，开支增加，形成资源压迫与战略决策焦虑。</li>
 </ul>
 <h3 id="2-成败机制"><a href="#2-成败机制" class="headerlink" title="2. 成败机制"></a>2. 成败机制</h3><ul>
 <li>游戏失败条件：主角失去王冠。</li>
 <li>失败后将重置当前岛屿的部分进度，保留部分资源与人员。</li>
-<li>成功推进的奖励机制为资源回馈与永久解锁。</li>
+<li>游戏在剧情上的成功为解放所有岛屿，但玩家可保留传送门，挑战更久的存活天数。</li>
 </ul>
 <hr>
 <h2 id="六、创新点与设计哲学"><a href="#六、创新点与设计哲学" class="headerlink" title="六、创新点与设计哲学"></a>六、创新点与设计哲学</h2><h3 id="1-极简操作与复杂策略的平衡"><a href="#1-极简操作与复杂策略的平衡" class="headerlink" title="1. 极简操作与复杂策略的平衡"></a>1. 极简操作与复杂策略的平衡</h3><ul>
-<li>单一输入机制下，提供多样战术决策空间。</li>
+<li>简单按键操作，提供更多战术策略空间。</li>
 <li>鼓励玩家通过尝试与失败逐步掌握玩法核心。</li>
 </ul>
 <h3 id="2-弱引导设计"><a href="#2-弱引导设计" class="headerlink" title="2. 弱引导设计"></a>2. 弱引导设计</h3><ul>
-<li>游戏不提供系统化教程，强调“感知型学习”。</li>
-<li>增强探索感与沉浸感，适合核心策略玩家。</li>
+<li>游戏不提供系统化教程，强调游戏探索。</li>
+<li>增强沉浸感，适合休闲策略玩家。</li>
 </ul>
 <h3 id="3-循环推进与高重玩性"><a href="#3-循环推进与高重玩性" class="headerlink" title="3. 循环推进与高重玩性"></a>3. 循环推进与高重玩性</h3><ul>
-<li>岛屿探索系统提供多线进程与策略变体。</li>
-<li>合作与单人体验差异明显，形成多层次玩法深度。</li>
+<li>岛屿资源随机配置提供策略变体，提高重玩性。</li>
+<li>敌人随存活时间增强，强调开疆扩土和策略更新。</li>
 </ul>
 
       
