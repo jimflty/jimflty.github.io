@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>归档: 2025/5 | Shinchan Li&#39;s Blog</title>
+  <title>Hexo使用学习笔记 | Shinchan Li&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Shinchan Li&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/2025/05/index.html">
+  <meta name="description" content="Hexo学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo使用学习笔记">
+<meta property="og:url" content="http://example.com/2025/03/10/hexo%E7%BE%8E%E5%8C%96/hexo%E7%BE%8E%E5%8C%96/index.html">
 <meta property="og:site_name" content="Shinchan Li&#39;s Blog">
+<meta property="og:description" content="Hexo学习">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-10T06:57:47.000Z">
+<meta property="article:modified_time" content="2025-07-04T08:12:07.846Z">
 <meta property="article:author" content="Jimflty">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Shinchan Li's Blog" type="application/atom+xml">
@@ -69,58 +74,124 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2025" class="archive-year">2025</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2025/05/22/Wake/Wake/" class="archive-article-date">
-  <time class="dt-published" datetime="2025-05-22T03:00:48.000Z" itemprop="datePublished">5月 22</time>
+        <section id="main"><article id="post-hexo美化/hexo美化" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/10/hexo%E7%BE%8E%E5%8C%96/hexo%E7%BE%8E%E5%8C%96/" class="article-date">
+  <time class="dt-published" datetime="2025-03-10T06:57:47.000Z" itemprop="datePublished">2025-03-10</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2025/05/22/Wake/Wake/">《Alan Wake》短评</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hexo使用学习笔记
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-game-design">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2025/05/14/kingdomlike/kingdomlike/" class="archive-article-date">
-  <time class="dt-published" datetime="2025-05-14T03:08:21.000Z" itemprop="datePublished">5月 14</time>
-</a>
+    <div class="e-content article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2025/05/14/kingdomlike/kingdomlike/">《八武士》策划案</a>
-    </h1>
-  
+        <p>Hexo建站完毕，还需经过一定的美化达到观感上的满意。Hexo可进行美化的部分包括主题、背景，以及文档排版（layout）。Hexo初始主题已经非常简洁美观，故本文主要进行自定义背景、文档排版美化等，排除在美化过程中发现的问题，查看最终美化结果。</p>
+<hr>
+<h3 id="自定义背景"><a href="#自定义背景" class="headerlink" title="自定义背景"></a>自定义背景</h3><p>根据<a target="_blank" rel="noopener" href="https://blog.juis.top/posts/c81197b5.Html">Hexo 自定义本地封面图的办法 | Juice’s Blog</a>中提到的方法：</p>
+<ol>
+<li><p>图片的http链接</p>
+</li>
+<li><p>把图片放在<code>博客根目录/source/images</code></p>
+</li>
+<li><p>通过 abbrlink 和 assetimg 的方式（需要安装abbrlink&amp;&amp;asset-img）</p>
+</li>
+</ol>
+<p>三种方式均可实现自定义背景，但考虑到http有内容替换的可能性，把心仪的图片保存到本地的方式更为稳妥且不用额外安装插件，因此选择采用<code>2</code>。</p>
+<p>由于距该教程已过去两年，Hexo文件结构已然发生变化，现在放置背景图片的目标文件夹为<code>根目录/public/css/images</code></p>
+<p>我们将图片放置到目标文件夹并命名为banner.jpg，即可完成背景替换。</p>
+<hr>
+<h3 id="文档排版"><a href="#文档排版" class="headerlink" title="文档排版"></a>文档排版</h3><h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a><code>layout</code></h3><p><code>layout</code>有助于更好地控制博客页面的结构和样式，使我们能够根据需求轻松创建和管理不同类型的页面和文章。详细教程：<a target="_blank" rel="noopener" href="https://elykia-cn.github.io/posts/21.html">Hexo 教程 (四) Layout 详解：从原理到应用 | 致以无暇之人</a></p>
+<p><code>layout</code>在官网文档中的另一种说法是<code>布局</code>，默认有三种：</p>
+<ol>
+<li>post（页面仍然为Hexo主题）</li>
+<li>page（新建页面）</li>
+<li>drafts（草稿，不会在blog中显示，后续可通过publish命令发布为post）</li>
+</ol>
+<h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a><code>Front-matter</code></h3><p><code>Front-matter</code>用于post在博客页面的显示和分类，常用属性有：</p>
+<table>
+<thead>
+<tr>
+<th align="left">设置</th>
+<th align="left">描述</th>
+<th align="left">默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>title</code></td>
+<td align="left">标题</td>
+<td align="left">文章的文件名</td>
+</tr>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">建立日期</td>
+<td align="left">文件建立日期</td>
+</tr>
+<tr>
+<td align="left"><code>tags</code></td>
+<td align="left">标签</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>categories</code></td>
+<td align="left">分类</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>permalink</code></td>
+<td align="left">覆盖文章的永久链接. 永久链接应该以 <code>/</code> 或 <code>.html</code> 结尾</td>
+<td align="left"><code>null</code></td>
+</tr>
+<tr>
+<td align="left"><code>excerpt</code></td>
+<td align="left">设置文章在博客页面显示的摘要，默认显示全文</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2025/03/10/hexo%E7%BE%8E%E5%8C%96/hexo%E7%BE%8E%E5%8C%96/" data-id="cmcojdtul0000psf5awk76iqv" data-title="Hexo使用学习笔记" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/04/18/Miami-Hotline/Miami-Hotline/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          《迈阿密热线》短评
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>
