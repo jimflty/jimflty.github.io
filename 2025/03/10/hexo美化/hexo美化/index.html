@@ -1,108 +1,202 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo使用学习笔记 | Shinchan Li&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Hexo学习">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo使用学习笔记">
-<meta property="og:url" content="http://example.com/2025/03/10/hexo%E7%BE%8E%E5%8C%96/hexo%E7%BE%8E%E5%8C%96/index.html">
-<meta property="og:site_name" content="Shinchan Li&#39;s Blog">
-<meta property="og:description" content="Hexo学习">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-03-10T06:57:47.000Z">
-<meta property="article:modified_time" content="2025-07-04T08:12:07.846Z">
-<meta property="article:author" content="Jimflty">
-<meta property="article:tag" content="Hexo">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Shinchan Li's Blog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+    <meta charset="utf-8" />
+    <title>Hexo学习笔记 | Jream&#39;s Blog</title>
+    <meta name="author" content="Jimflty" />
+    <meta name="description" content="自从用了这个主题总感觉标题好违和" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
 
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
 
 <meta name="generator" content="Hexo 7.3.0"></head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Shinchan Li&#39;s Blog</a>
-      </h1>
-      
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>JREAM&#39;S BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;JREAM&#39;S BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Hexo学习笔记</h1>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/3/10
+        </span>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <span class="category">
+            <a href="/categories/%E7%BC%96%E7%A8%8B/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                编程
+            </a>
+        </span>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
         
-      </nav>
-      <nav id="sub-nav">
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/Hexo/" style="color: #00a596">
+                    Hexo
+                </a>
+            </span>
+            
+        </span>
         
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
     </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-hexo美化/hexo美化" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/03/10/hexo%E7%BE%8E%E5%8C%96/hexo%E7%BE%8E%E5%8C%96/" class="article-date">
-  <time class="dt-published" datetime="2025-03-10T06:57:47.000Z" itemprop="datePublished">2025-03-10</time>
-</a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      Hexo使用学习笔记
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Hexo建站完毕，还需经过一定的美化达到观感上的满意。Hexo可进行美化的部分包括主题、背景，以及文档排版（layout）。Hexo初始主题已经非常简洁美观，故本文主要进行自定义背景、文档排版美化等，排除在美化过程中发现的问题，查看最终美化结果。</p>
+    <div class="content" v-pre>
+        <p>Hexo建站完毕，还需经过一定的美化达到观感上的满意。Hexo可进行美化的部分包括主题、背景，以及文档排版（layout）。Hexo初始主题已经非常简洁美观，仅需对背景、文档排版等进行美化即可。本文用于记录美化过程中发现和排除的问题，查看最终美化结果。</p>
 <hr>
-<h3 id="自定义背景"><a href="#自定义背景" class="headerlink" title="自定义背景"></a>自定义背景</h3><p>根据<a target="_blank" rel="noopener" href="https://blog.juis.top/posts/c81197b5.Html">Hexo 自定义本地封面图的办法 | Juice’s Blog</a>中提到的方法：</p>
+<h2 id="自定义背景"><a href="#自定义背景" class="headerlink" title="自定义背景"></a>自定义背景</h2><p>根据<a target="_blank" rel="noopener" href="https://blog.juis.top/posts/c81197b5.Html">Hexo 自定义本地封面图</a>中提到的方法：</p>
 <ol>
 <li><p>图片的http链接</p>
 </li>
@@ -115,7 +209,7 @@
 <p>由于距该教程已过去两年，Hexo文件结构已然发生变化，现在放置背景图片的目标文件夹为<code>根目录/public/css/images</code></p>
 <p>我们将图片放置到目标文件夹并命名为banner.jpg，即可完成背景替换。</p>
 <hr>
-<h3 id="文档排版"><a href="#文档排版" class="headerlink" title="文档排版"></a>文档排版</h3><h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a><code>layout</code></h3><p><code>layout</code>有助于更好地控制博客页面的结构和样式，使我们能够根据需求轻松创建和管理不同类型的页面和文章。详细教程：<a target="_blank" rel="noopener" href="https://elykia-cn.github.io/posts/21.html">Hexo 教程 (四) Layout 详解：从原理到应用 | 致以无暇之人</a></p>
+<h2 id="文档排版"><a href="#文档排版" class="headerlink" title="文档排版"></a>文档排版</h2><h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a><code>layout</code></h3><p><code>layout</code>有助于更好地控制博客页面的结构和样式，使我们能够根据需求轻松创建和管理不同类型的页面和文章。详细教程：<a target="_blank" rel="noopener" href="https://elykia-cn.github.io/posts/21.html">Layout详解</a></p>
 <p><code>layout</code>在官网文档中的另一种说法是<code>布局</code>，默认有三种：</p>
 <ol>
 <li>post（页面仍然为Hexo主题）</li>
@@ -162,153 +256,101 @@
 <td align="left"></td>
 </tr>
 </tbody></table>
+<p>在这些属性中<code>excerpt</code>对美化帮助最大，显示摘要极大程度上减少了博客页面的冗余。</p>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>2025.7.5 刚从大佬的blog回来，看了别人的美化向来喜欢极简的我心血来潮想尝试新主题，换换口味。</p>
+<p>本次将要更换的主题是<code>ParticleX</code><a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">主题介绍</a>，相比默认该主题更强调个性化，且突出显示的个人介绍界面也非常讨喜。</p>
+<p>好在Hexo主题安装非常方便，只需将主题克隆到themes文件夹，再在config文件中替换即可。接下来针对两个主题默认设置上的差异进行一些调和与个性化设置，便可完成主题适配。</p>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><pre><code class="shell">cd themes
+git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
+</code></pre>
+<p>在<code>_config.yml</code>中定位<code>themes</code>，将默认内容更改为particlex，完成更换。</p>
+<h3 id="调整设置"><a href="#调整设置" class="headerlink" title="调整设置"></a>调整设置</h3><p><strong>关闭代码高亮</strong><br>Hexo 有自带的代码高亮，但是和 ParticleX 的不兼容。需要删除配置文件中<code>syntax highlight:</code>后面的内容。</p>
+<p><strong>随机背景</strong><br><code>background</code>参数是一个列表，打开时会随机加载一个背景。</p>
+<pre><code># Avatar image
+avatar: /images/avatar.jpg
 
-      
+# Home page background image
+background:
+    - /images/background.jpg
+
+# Loading image
+loading: /images/loading.gif
+
+# Optional colors for category and tag
+colors:
+    - &quot;#ffa2c4&quot;
+    - &quot;#00bcd4&quot;
+    - &quot;#03a9f4&quot;
+    - &quot;#00a596&quot;
+    - &quot;#ff7d73&quot;
+</code></pre>
+<p><strong>主页信息卡片</strong><br>description 支持 Markdown 格式。</p>
+<p>图标链接 iconLinks 配置和导航栏配置相同。</p>
+<pre><code># Side info card
+card:
+    enable: true
+    description: |
+        Description
+        ...
+    iconLinks:
+    friendLinks:
+</code></pre>
+<p><strong>页脚</strong><br>目前网站还是挂载在Github，若以后使用个人域名，需在页脚添加备案信息。</p>
+<pre><code># Footer info
+footer:
+    since: 2022
+    # Customize the server domain name ICP
+    ICP:
+        enable: false
+        code:
+        link:
+</code></pre>
+<p><strong>文章置顶</strong><br>在 <code>Front-Matter</code> 里设置 <code>pinned</code> 作为置顶参数，越大越靠前，默认为 0。</p>
+
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2025/03/10/hexo%E7%BE%8E%E5%8C%96/hexo%E7%BE%8E%E5%8C%96/" data-id="cmcojdtul0000psf5awk76iqv" data-title="Hexo使用学习笔记" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
     
-<nav id="article-nav">
-  
-    <a href="/2025/03/11/markdown/markdown/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">前一篇</strong>
-      <div class="article-nav-title">
-        
-          Markdown学习笔记
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B8%B8%E6%88%8F/">游戏</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li></ul>
-    </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/" rel="tag">游戏拆解</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" rel="tag">游戏策划</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/" rel="tag">游戏评测</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B8%B8%E6%88%8F%E9%9A%8F%E6%83%B3/" rel="tag">游戏随想</a></li></ul>
-    </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E6%8B%86%E8%A7%A3/" style="font-size: 10px;">游戏拆解</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" style="font-size: 10px;">游戏策划</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/" style="font-size: 20px;">游戏评测</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E9%9A%8F%E6%83%B3/" style="font-size: 10px;">游戏随想</a>
-    </div>
-  </div>
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/06/">六月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/05/">五月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/04/">四月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">三月 2025</a></li></ul>
-    </div>
-  </div>
-
-
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2025/06/03/%E9%BB%91%E5%A4%9C%E5%90%9B%E4%B8%B4/%E9%BB%91%E5%A4%9C%E5%90%9B%E4%B8%B4/">《黑夜君临》评测</a>
-          </li>
-        
-          <li>
-            <a href="/2025/05/22/Wake/Wake/">《Alan Wake》短评</a>
-          </li>
-        
-          <li>
-            <a href="/2025/05/14/kingdomlike/kingdomlike/">《八武士》策划案</a>
-          </li>
-        
-          <li>
-            <a href="/2025/04/23/Kindom-TwoCrowns/Kindom-TwoCrowns/">《王国：两位君主》游戏拆解</a>
-          </li>
-        
-          <li>
-            <a href="/2025/04/18/Miami-Hotline/Miami-Hotline/">《迈阿密热线》短评</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+    
+</div>
 
-  
-</aside>
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2025 Jream&#39;s Blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Jimflty
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2025 Jimflty<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
-  </div>
 </footer>
 
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+    <script src="/js/main.js"></script>
+    
     
 
 
-<script src="/js/jquery-3.6.4.min.js"></script>
 
 
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
+    
 </body>
 </html>
