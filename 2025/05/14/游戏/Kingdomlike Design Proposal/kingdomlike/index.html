@@ -3,9 +3,9 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>《迈阿密热线》短评 | Jream&#39;s Blog</title>
+    <title>《八武士》策划案 | 星辰小站</title>
     <meta name="author" content="Jimflty" />
-    <meta name="description" content="自从用了这个主题总感觉标题好违和" />
+    <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
@@ -63,7 +63,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>JREAM&#39;S BLOG</span>
+            <span>星辰小站</span>
         </a>
         
         <a href="/">
@@ -95,7 +95,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;JREAM&#39;S BLOG</span>
+            <span>&emsp;星辰小站</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -156,14 +156,14 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>《迈阿密热线》短评</h1>
+        <h1>《八武士》策划案</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/4/18
+            2025/5/14
         </span>
         
         <span class="category">
@@ -184,8 +184,8 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/" style="color: #03a9f4">
-                    游戏评测
+                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" style="color: #ff7d73">
+                    游戏策划
                 </a>
             </span>
             
@@ -194,9 +194,64 @@
     </div>
     
     <div class="content" v-pre>
-        <p>迈阿密热线双部曲游玩体验：好玩。可惜比较晕2D没能一次性打通，不然完整体验下来键盘和我肯定要炸一个</p>
-<p>谈论一件艺术品的游戏性其实没什么必要，两部作品带给我的感受是，制作组的初衷比起发掘新颖的游戏创意，更像是为了创造一种出嗨草上头的体验——摇晃的镜头、变幻的背景、动感的音乐，叫人甘于沦为欲望的动物。</p>
-<p>一个非常天才的设定——动物面具，面具可以赋予特殊功能，选择面具是选择游戏风格，戴上面具是摘下现实的面具，这是继黑暗之魂后再一次深刻感受到游戏机制同玩家的关系与游戏主题的结合。不止游戏设定，在剧情上也能看见许多破墙痕迹。</p>
+        <p><strong>——</strong> <strong>创作灵感源于《王国》</strong></p>
+<p><strong>1.</strong> <strong>游戏概述</strong></p>
+<p>本作为一款融合塔防与探索要素的2D横版策略游戏，玩家将扮演一名流浪武士，抵达并守护一座被恶魔侵袭的村庄。通过调配村民、建造设施、外出探索资源，发展村庄，抵御恶魔袭击。</p>
+<p>评价：</p>
+<p>为突出游戏节奏与玩法核心，先删减“解放村庄”的过渡流程，直接让玩家从村庄被袭开始游戏。目前优先目标是制作出demo。</p>
+<p><strong>2.</strong> <strong>游戏设定</strong></p>
+<p><strong>2.1</strong> <strong>角色设定</strong></p>
+<p><strong>流浪武士（玩家）</strong></p>
+<p> 通过工具指派村民职位</p>
+<p> 可前往地图边缘区域进行探索</p>
+<p><strong>村民</strong></p>
+<p>默认无职业，分配后成为以下两类：</p>
+<p> 农民：可通过种植获取资源</p>
+<p> 防卫：包括近战“矛兵”与远程“弓箭手”，夜间值守城墙与塔楼</p>
+<p><strong>敌方</strong></p>
+<p> 每夜发起攻击，目标为村庄粮仓<br> 随波次增强<br> 后期引入更多类型敌人</p>
+<p><strong>2.2</strong> <strong>建筑系统</strong></p>
+<p><strong>粮仓</strong>：村庄核心</p>
+<p><strong>城墙</strong>：防御工程</p>
+<p><strong>农田</strong>：收集资源</p>
+<p><strong>商店</strong>：获取分配职位的道具</p>
+<p><strong>2.3</strong> <strong>经济系统</strong></p>
+<p>货币为唯一资源单位，用于：</p>
+<p>  生产工具（分配职业）</p>
+<p>  建造&#x2F;升级建筑</p>
+<p>货币来源：</p>
+<p>  农民种田 → 日落后返还货币至仓库</p>
+<p>  主角探索带回资源 → 可兑换成货币</p>
+<p><strong>2.4</strong> <strong>UI设计</strong></p>
+<p><strong>商店UI</strong>：靠近商店后弹出购买列表</p>
+<p><strong>提示UI</strong>：靠近可升级&#x2F;建造的建筑时，会显示升级所需资源</p>
+<p><strong>资源UI</strong>：在屏幕右上角显示当前资源量</p>
+<p><strong>3.</strong> <strong>核心玩法</strong></p>
+<p><strong>核心循环</strong>：白天发展 → 夜晚防御 → 外出探索 → 再次发展</p>
+<p>白天：</p>
+<p>  玩家招募村民、分配工具，安排为农民或防卫兵</p>
+<p>  农民前往农田耕作，防卫兵进入塔楼或待命</p>
+<p>  玩家可出村探索附近森林、遗迹，带回宝贵资源</p>
+<p>夜晚：</p>
+<p>  所有村民停止劳动，返回村庄或战斗岗位</p>
+<p>  敌人自地图边缘进攻，武士与防卫兵共同抵御</p>
+<p>  防御建筑消耗耐久，若破损需次日修复</p>
+<p>探索系统：</p>
+<p>  玩家可在白天前往地图边缘探索</p>
+<p>  探索区域每日更新，具有随机性和危险性</p>
+<p><strong>4.</strong> <strong>动画与美术风格</strong></p>
+<p><strong>整体风格：</strong></p>
+<p>参考像素美术风格</p>
+<p><strong>角色动画：</strong></p>
+<p> <strong>主角</strong>：跑步、交互、受伤、倒地等基本动作<br> <strong>村民</strong>：耕作、射击、战斗、被击倒<br> <strong>敌人</strong>：行走、攻击、死亡特效<br> <strong>建筑</strong>：被建造&#x2F;损坏<br> <strong>商店</strong>：购买物品</p>
+<p><strong>天气与昼夜系统：</strong></p>
+<p>通过光影反映昼夜变化</p>
+<p><strong>5.</strong> <strong>音乐与音效设计</strong></p>
+<p><strong>背景音乐（BGM）</strong></p>
+<p>  白天：悠扬舒缓</p>
+<p>  夜晚：紧张低沉</p>
+<p><strong>音效设计</strong></p>
+<p> 动作交互基本音效<br> 战斗音效<br> 恶魔死亡音效</p>
 
     </div>
     
@@ -212,7 +267,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-             - 2025 Jream&#39;s Blog
+             - 2025 星辰小站
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

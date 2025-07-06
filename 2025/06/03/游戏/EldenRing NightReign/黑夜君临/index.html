@@ -3,9 +3,9 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>《八武士》策划案 | Jream&#39;s Blog</title>
+    <title>《黑夜君临》评测 | 星辰小站</title>
     <meta name="author" content="Jimflty" />
-    <meta name="description" content="自从用了这个主题总感觉标题好违和" />
+    <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
@@ -63,7 +63,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>JREAM&#39;S BLOG</span>
+            <span>星辰小站</span>
         </a>
         
         <a href="/">
@@ -95,7 +95,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;JREAM&#39;S BLOG</span>
+            <span>&emsp;星辰小站</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -156,14 +156,14 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>《八武士》策划案</h1>
+        <h1>《黑夜君临》评测</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/5/14
+            2025/6/3
         </span>
         
         <span class="category">
@@ -184,8 +184,8 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%B8%B8%E6%88%8F%E7%AD%96%E5%88%92/" style="color: #00a596">
-                    游戏策划
+                <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/" style="color: #ff7d73">
+                    游戏评测
                 </a>
             </span>
             
@@ -194,64 +194,11 @@
     </div>
     
     <div class="content" v-pre>
-        <p><strong>——</strong> <strong>创作灵感源于《王国》</strong></p>
-<p><strong>1.</strong> <strong>游戏概述</strong></p>
-<p>本作为一款融合塔防与探索要素的2D横版策略游戏，玩家将扮演一名流浪武士，抵达并守护一座被恶魔侵袭的村庄。通过调配村民、建造设施、外出探索资源，发展村庄，抵御恶魔袭击。</p>
-<p>评价：</p>
-<p>为突出游戏节奏与玩法核心，先删减“解放村庄”的过渡流程，直接让玩家从村庄被袭开始游戏。目前优先目标是制作出demo。</p>
-<p><strong>2.</strong> <strong>游戏设定</strong></p>
-<p><strong>2.1</strong> <strong>角色设定</strong></p>
-<p><strong>流浪武士（玩家）</strong></p>
-<p> 通过工具指派村民职位</p>
-<p> 可前往地图边缘区域进行探索</p>
-<p><strong>村民</strong></p>
-<p>默认无职业，分配后成为以下两类：</p>
-<p> 农民：可通过种植获取资源</p>
-<p> 防卫：包括近战“矛兵”与远程“弓箭手”，夜间值守城墙与塔楼</p>
-<p><strong>敌方</strong></p>
-<p> 每夜发起攻击，目标为村庄粮仓<br> 随波次增强<br> 后期引入更多类型敌人</p>
-<p><strong>2.2</strong> <strong>建筑系统</strong></p>
-<p><strong>粮仓</strong>：村庄核心</p>
-<p><strong>城墙</strong>：防御工程</p>
-<p><strong>农田</strong>：收集资源</p>
-<p><strong>商店</strong>：获取分配职位的道具</p>
-<p><strong>2.3</strong> <strong>经济系统</strong></p>
-<p>货币为唯一资源单位，用于：</p>
-<p>  生产工具（分配职业）</p>
-<p>  建造&#x2F;升级建筑</p>
-<p>货币来源：</p>
-<p>  农民种田 → 日落后返还货币至仓库</p>
-<p>  主角探索带回资源 → 可兑换成货币</p>
-<p><strong>2.4</strong> <strong>UI设计</strong></p>
-<p><strong>商店UI</strong>：靠近商店后弹出购买列表</p>
-<p><strong>提示UI</strong>：靠近可升级&#x2F;建造的建筑时，会显示升级所需资源</p>
-<p><strong>资源UI</strong>：在屏幕右上角显示当前资源量</p>
-<p><strong>3.</strong> <strong>核心玩法</strong></p>
-<p><strong>核心循环</strong>：白天发展 → 夜晚防御 → 外出探索 → 再次发展</p>
-<p>白天：</p>
-<p>  玩家招募村民、分配工具，安排为农民或防卫兵</p>
-<p>  农民前往农田耕作，防卫兵进入塔楼或待命</p>
-<p>  玩家可出村探索附近森林、遗迹，带回宝贵资源</p>
-<p>夜晚：</p>
-<p>  所有村民停止劳动，返回村庄或战斗岗位</p>
-<p>  敌人自地图边缘进攻，武士与防卫兵共同抵御</p>
-<p>  防御建筑消耗耐久，若破损需次日修复</p>
-<p>探索系统：</p>
-<p>  玩家可在白天前往地图边缘探索</p>
-<p>  探索区域每日更新，具有随机性和危险性</p>
-<p><strong>4.</strong> <strong>动画与美术风格</strong></p>
-<p><strong>整体风格：</strong></p>
-<p>参考像素美术风格</p>
-<p><strong>角色动画：</strong></p>
-<p> <strong>主角</strong>：跑步、交互、受伤、倒地等基本动作<br> <strong>村民</strong>：耕作、射击、战斗、被击倒<br> <strong>敌人</strong>：行走、攻击、死亡特效<br> <strong>建筑</strong>：被建造&#x2F;损坏<br> <strong>商店</strong>：购买物品</p>
-<p><strong>天气与昼夜系统：</strong></p>
-<p>通过光影反映昼夜变化</p>
-<p><strong>5.</strong> <strong>音乐与音效设计</strong></p>
-<p><strong>背景音乐（BGM）</strong></p>
-<p>  白天：悠扬舒缓</p>
-<p>  夜晚：紧张低沉</p>
-<p><strong>音效设计</strong></p>
-<p> 动作交互基本音效<br> 战斗音效<br> 恶魔死亡音效</p>
+        <p>《黑夜君临》（以下简称黑环）是以《艾尔登法环》背景观衍生出的单人&#x2F;三人 Roguelike，描绘黑夜降临交界地的风云变幻，讲述渡夜者击退黑夜使得黎明重返交界地的历险。</p>
+<p>黑环是 FromSoftware 旗下第一款多人合作游戏，虽然前作已经引入联机机制，但该作更注重合作，唯有多方齐心戮力才有可能在讨伐 boss上取得成功。在黑环中，每一个精英怪因在场人数的增加相应得提高各方面数值，如血量、伤害、韧性等，且这种提高是指数级的，无疑在多方面都给玩家带来困阻，因此如若三人分头行动，那么每个人面对高倍额数值敌人时潜在风险便会大幅提高，配合死亡惩罚机制，分头行动带来的收益将远不如合作共赢。同时，固定三人的小队人数在某一程度上拒绝了玩家与单个好友组成小队的期望，但对小队内部职业搭配而言是存在合理性的，成员职业更多样的小队也要比由单一强势职业构成的小队更具推图效率，而推图获取资源、提升等级才是出击取得胜利的关键。</p>
+<h2 id="游戏特点"><a href="#游戏特点" class="headerlink" title="游戏特点"></a>游戏特点</h2><p>游戏中一场游戏由三个夜晚构成，每个夜晚敌人都会提高难度，玩家将在第三夜面对boss。白天玩家可以通过讨伐地图上的兴趣点、击败boss来获得强力武器、道具和用于升级的代币，以此增强角色软实力。在魂类游戏受众中，不乏有人拥有通过背板做到无伤击败最终boss的硬实力，但显然本作并不是一部严肃魂游，相比前作需要一板一眼地盯着boss的出招式的战斗，本作作了诸多简化，如大幅提升防御能力、更灵活的移动方式、多数大招释放期间无敌以及各种保命道具等，使得黑环彰显出独特魅力，强调路线规划、合理决策、缜密运营才是本作的重中之重。</p>
+<h2 id="不足与展望"><a href="#不足与展望" class="headerlink" title="不足与展望"></a>不足与展望</h2><p>本作的缺陷也很明显，作为团队合作游戏，交流是必不可少的，但本作并没有过多的交流窗口，唯一能向队友透露个人意向的方式是在地图上标点，其他队友通过查看标点以及队友动向来决定是否配合，这种决策因为每个人考量范围不同而具有不可信力，倘若队友就某一决定产生分歧而兵分两路甚至兵分三路，导致彼此不信任氛围在队内蔓延，最终将致分崩离析。不过玩家随着阅历提升，对游戏规则的掌握度越来越高，玩家作出的决策具有普遍性、趋同性，游戏也便能更顺利地进行，玩家之间还打磨出一种无需言语的默契。但这种推图趋同可能存在抹杀游戏内多种推图思路与流派、玩家容易陷入单调重复而感到乏味的隐患，为消除这种隐患，可能需要呼唤制作方引入更多、更新的内容或机制到游戏本体中，亦或重新调整不同兴趣点的难度与收益。</p>
+<p>作为广为好评的《艾尔登法环》衍生作，由衷希望本作能够长久延续良好口碑。</p>
 
     </div>
     
@@ -267,7 +214,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-             - 2025 Jream&#39;s Blog
+             - 2025 星辰小站
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>

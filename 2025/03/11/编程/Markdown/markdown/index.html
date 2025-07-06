@@ -3,9 +3,9 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>《Alan Wake》短评 | Jream&#39;s Blog</title>
+    <title>Markdown学习笔记 | 星辰小站</title>
     <meta name="author" content="Jimflty" />
-    <meta name="description" content="自从用了这个主题总感觉标题好违和" />
+    <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
@@ -63,7 +63,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>JREAM&#39;S BLOG</span>
+            <span>星辰小站</span>
         </a>
         
         <a href="/">
@@ -95,7 +95,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;JREAM&#39;S BLOG</span>
+            <span>&emsp;星辰小站</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -156,22 +156,22 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>《Alan Wake》短评</h1>
+        <h1>Markdown学习笔记</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/5/22
+            2025/3/11
         </span>
         
         <span class="category">
-            <a href="/categories/%E6%B8%B8%E6%88%8F/">
+            <a href="/categories/%E7%BC%96%E7%A8%8B/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                游戏
+                编程
             </a>
         </span>
         
@@ -184,8 +184,8 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E6%B8%B8%E6%88%8F%E8%AF%84%E6%B5%8B/" style="color: #00bcd4">
-                    游戏评测
+                <a href="/tags/Markdown/" style="color: #ff7d73">
+                    Markdown
                 </a>
             </span>
             
@@ -194,10 +194,90 @@
     </div>
     
     <div class="content" v-pre>
-        <p><strong>一次把童年对黑暗的恐惧的失败提炼，虽借鉴《闪灵》创意制造精神分裂现场，但实际呈现内容滥竽充数，致敬不周反成亵渎。</strong></p>
-<p>吐槽（剧透）：TPS无准心带自瞄虽降低了许多战斗难度，但相对的的也带走了战斗趣味。瞄准系统带有聚焦功能但聚焦依然没有准心这点似乎就已经诠释了敌人不附带爆头反馈。倘若假设用意在于不鼓励战斗，却又设置随处可见物资补给点和随地散落的弹药，即便刻意参加每场战斗身上的物资仍然严重溢出，导致打也打不爽，不打又只能眼睁睁看着大量物资无法带走，实乃囤鼠玩家剐心之痛。</p>
-<p>最终boss——Tornado，前面全是堆怪，这次干脆把怪物堆成一座大山，其数量之庞大不禁让人承认终究还是成功构建出boss战氛围。但单一增加数量并没有引发战斗难度的径向提升——触发场景前放置信号枪无限弹药补给点，提示未免太刻意，但杀死Tornado实际仅需四发信号弹，物资溢出给人一种有二阶段的错觉。然而，见面杀让Tornado草草下场就是这个游戏战斗部分的结局，零回味。</p>
-<p>整体游玩下来，作为一个碎片化剧情导向的游戏，真正推进剧情的部分基本通过CG展示，如主角如何陷入精神疾病困境、幻觉侵占主角精神世界的具象化云云···枯燥的实操部分又让人在游戏后期很难沉下心去看CG。以CG推进剧情，可游玩部分烘托对DeepDark的超自然恐惧，剧情处理思路没问题，实际呈现效果有一定割裂感。</p>
+        <p>Hexo默认使用Markdown语言进行页面渲染，为使写作更加流畅、排版更符合阅读习惯，有必要学习Markdown语言。</p>
+<h2 id="Markdown介绍"><a href="#Markdown介绍" class="headerlink" title="Markdown介绍"></a>Markdown介绍</h2><p>​	Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版。它使用易读易写的纯文本格式编写文档，可与HTML混编，可导出 HTML、PDF 以及本身的 .md 格式的文件。</p>
+<h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>通过#来标记标题，#的数量表示标题等级，最高可支持六级标题。</p>
+<p>Markdown语法：<code># 一级标题</code></p>
+<p>实际效果：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3><p> 使用空白行对文本进行分隔（在两行文本中新增一行空白行），使文本段落结构更清晰。</p>
+<p>语法及效果：</p>
+<p>段落1<br>段落2（1、2之间无空行）</p>
+<p>段落3（2、3之间有空行）</p>
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p>在一行的末尾添加至少两个空格或<code>&lt;br&gt;</code>，然后按回车键,即可创建一个换行。</p>
+<h3 id="强调（加粗）"><a href="#强调（加粗）" class="headerlink" title="强调（加粗）"></a>强调（加粗）</h3><p>在想要加粗强调的文本两边加上两个星号<code>**</code>，即可将文本标粗。</p>
+<p>语法：<code>**需要强调的文本**</code></p>
+<p>效果：<strong>需要强调的文本</strong></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>通过在文本前加上符号<code>&gt;</code>创建引用。</p>
+<p>语法：<code>&gt; 引用文本</code></p>
+<p>效果：</p>
+<blockquote>
+<p>引用文本</p>
+</blockquote>
+<h3 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h3><p>可通过在前面添加<code>数字.</code>形式创建有序序列，数字可任意，但应以1开头。在前面添加<code>-</code>创建无<br>序序列。</p>
+<p>语法：</p>
+<pre><code>1. xxx
+1. xxx
+1. xxx
+</code></pre>
+<p>效果：</p>
+<ol>
+<li>xxx</li>
+<li>xxx</li>
+<li>xxx</li>
+</ol>
+<p>语法：</p>
+<pre><code>- xxx
+- yyy
+- zzz
+</code></pre>
+<p>效果：</p>
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>要将单词或短语表示为代码，将其包裹在<code>反引号 (`)</code> 中。</p>
+<p>语法：<code>（`文本`）</code></p>
+<p>效果：<code>文本</code></p>
+<p>要创建代码块，可通过在代码块前缩进一个制表符或四个空格以上，或用&#96;&#96;&#96;&#x2F;~~~将代码块框出。可在反引号后面添加代码对应的语言，如c++、python等。<br>效果：</p>
+<pre><code class="python">xxx
+    yyy
+zzz
+</code></pre>
+<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>用三个星号（*）或破折号（-）或下划线（_）创建分割线，并且不能包含其他内容</p>
+<h3 id="URL链接"><a href="#URL链接" class="headerlink" title="URL链接"></a>URL链接</h3><p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
+<p>语法：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code></p>
+<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3><p>要添加图像，使用感叹号 (!)， 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本。</p>
+<p>语法：<code>![图片alt](图片链接 &quot;图片title&quot;)</code></p>
+<p>效果：<img src="/%E8%BF%99%E6%98%AF%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87.jpg" alt="这是一张图片" title="图片"></p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>在误标的文本前加反斜杠\，让其显示为原本的形式。</p>
+<p>对于想要添加星号但不想标粗的文本：<br><code>\*xxx</code></p>
+<p>效果：<br>*xxx</p>
+<p>在 HTML 文件中，有两个字符需要特殊处理： &lt; 和 &amp; 。 &lt; 符号用于起始标签，&amp; 符号则用于标记 HTML 实体，如果你只是想要使用这些符号，你必须要使用实体的形式，像是 &lt; 和 &amp;。</p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>添加表格，使用三个或多个连字符（—）创建每列的标题，并使用管道（|）分隔每列。可以选择在表的任一端添加管道。</p>
+<p>语法：</p>
+<pre><code>| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+</code></pre>
+<p>效果：</p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Header</td>
+<td>Title</td>
+</tr>
+<tr>
+<td>Paragraph</td>
+<td>Text</td>
+</tr>
+</tbody></table>
 
     </div>
     
@@ -213,7 +293,7 @@
     <div id="footer-wrap">
         <div>
             &copy;
-             - 2025 Jream&#39;s Blog
+             - 2025 星辰小站
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
