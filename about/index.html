@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo学习笔记 | Jream&#39;s Blog</title>
+    <title>About | Jream&#39;s Blog</title>
     <meta name="author" content="Jimflty" />
     <meta name="description" content="自从用了这个主题总感觉标题好违和" />
     <meta name="keywords" content="" />
@@ -156,156 +156,21 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Hexo学习笔记</h1>
+        <h1>About</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/3/10
+            2025/7/5
         </span>
         
-        <span class="category">
-            <a href="/categories/%E7%BC%96%E7%A8%8B/">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                编程
-            </a>
-        </span>
-        
-        
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            
-            <span class="tag">
-                
-                <a href="/tags/Hexo/" style="color: #00a596">
-                    Hexo
-                </a>
-            </span>
-            
-        </span>
         
     </div>
     
     <div class="content" v-pre>
-        <p>Hexo建站完毕，还需经过一定的美化达到观感上的满意。Hexo可进行美化的部分包括主题、背景，以及文档排版（layout）。Hexo初始主题已经非常简洁美观，仅需对背景、文档排版等进行美化即可。本文用于记录美化过程中发现和排除的问题，查看最终美化结果。</p>
-<hr>
-<h2 id="自定义背景"><a href="#自定义背景" class="headerlink" title="自定义背景"></a>自定义背景</h2><p>根据<a target="_blank" rel="noopener" href="https://blog.juis.top/posts/c81197b5.Html">Hexo 自定义本地封面图</a>中提到的方法：</p>
-<ol>
-<li><p>图片的http链接</p>
-</li>
-<li><p>把图片放在<code>博客根目录/source/images</code></p>
-</li>
-<li><p>通过 abbrlink 和 assetimg 的方式（需要安装abbrlink&amp;&amp;asset-img）</p>
-</li>
-</ol>
-<p>三种方式均可实现自定义背景，但考虑到http有内容替换的可能性，把心仪的图片保存到本地的方式更为稳妥且不用额外安装插件，因此选择采用<code>2</code>。</p>
-<p>由于距该教程已过去两年，Hexo文件结构已然发生变化，现在放置背景图片的目标文件夹为<code>根目录/public/css/images</code></p>
-<p>我们将图片放置到目标文件夹并命名为banner.jpg，即可完成背景替换。</p>
-<hr>
-<h2 id="文档排版"><a href="#文档排版" class="headerlink" title="文档排版"></a>文档排版</h2><h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a><code>layout</code></h3><p><code>layout</code>有助于更好地控制博客页面的结构和样式，使我们能够根据需求轻松创建和管理不同类型的页面和文章。详细教程：<a target="_blank" rel="noopener" href="https://elykia-cn.github.io/posts/21.html">Layout详解</a></p>
-<p><code>layout</code>在官网文档中的另一种说法是<code>布局</code>，默认有三种：</p>
-<ol>
-<li>post（页面仍然为Hexo主题）</li>
-<li>page（新建页面）</li>
-<li>drafts（草稿，不会在blog中显示，后续可通过publish命令发布为post）</li>
-</ol>
-<h3 id="Front-matter"><a href="#Front-matter" class="headerlink" title="Front-matter"></a><code>Front-matter</code></h3><p><code>Front-matter</code>用于post在博客页面的显示和分类，常用属性有：</p>
-<table>
-<thead>
-<tr>
-<th align="left">设置</th>
-<th align="left">描述</th>
-<th align="left">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>title</code></td>
-<td align="left">标题</td>
-<td align="left">文章的文件名</td>
-</tr>
-<tr>
-<td align="left"><code>date</code></td>
-<td align="left">建立日期</td>
-<td align="left">文件建立日期</td>
-</tr>
-<tr>
-<td align="left"><code>tags</code></td>
-<td align="left">标签</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>categories</code></td>
-<td align="left">分类</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><code>permalink</code></td>
-<td align="left">覆盖文章的永久链接. 永久链接应该以 <code>/</code> 或 <code>.html</code> 结尾</td>
-<td align="left"><code>null</code></td>
-</tr>
-<tr>
-<td align="left"><code>excerpt</code></td>
-<td align="left">设置文章在博客页面显示的摘要，默认显示全文</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<p>在这些属性中<code>excerpt</code>对美化帮助最大，显示摘要极大程度上减少了博客页面的冗余。</p>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><p>2025.7.5 刚从大佬的blog回来，看了别人的美化向来喜欢极简的我心血来潮想尝试新主题，换换口味。</p>
-<p>本次将要更换的主题是<code>ParticleX</code><a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">主题介绍</a>，相比默认该主题更强调个性化，且突出显示的个人介绍界面也非常讨喜。</p>
-<p>好在Hexo主题安装非常方便，只需将主题克隆到themes文件夹，再在config文件中替换即可。接下来针对两个主题默认设置上的差异进行一些调和与个性化设置，便可完成主题适配。</p>
-<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><pre><code class="shell">cd themes
-git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
-</code></pre>
-<p>在<code>_config.yml</code>中定位<code>themes</code>，将默认内容更改为particlex，完成更换。</p>
-<h3 id="调整设置"><a href="#调整设置" class="headerlink" title="调整设置"></a>调整设置</h3><p><strong>关闭代码高亮</strong><br>Hexo 有自带的代码高亮，但是和 ParticleX 的不兼容。需要删除配置文件中<code>syntax highlight:</code>后面的内容。</p>
-<p><strong>随机背景</strong><br><code>background</code>参数是一个列表，打开时会随机加载一个背景。</p>
-<pre><code># Avatar image
-avatar: /images/avatar.jpg
-
-# Home page background image
-background:
-    - /images/background.jpg
-
-# Loading image
-loading: /images/loading.gif
-
-# Optional colors for category and tag
-colors:
-    - &quot;#ffa2c4&quot;
-    - &quot;#00bcd4&quot;
-    - &quot;#03a9f4&quot;
-    - &quot;#00a596&quot;
-    - &quot;#ff7d73&quot;
-</code></pre>
-<p><strong>主页信息卡片</strong><br>description 支持 Markdown 格式。</p>
-<p>图标链接 iconLinks 配置和导航栏配置相同。</p>
-<pre><code># Side info card
-card:
-    enable: true
-    description: |
-        Description
-        ...
-    iconLinks:
-    friendLinks:
-</code></pre>
-<p><strong>页脚</strong><br>目前网站还是挂载在Github，若以后使用个人域名，需在页脚添加备案信息。</p>
-<pre><code># Footer info
-footer:
-    since: 2022
-    # Customize the server domain name ICP
-    ICP:
-        enable: false
-        code:
-        link:
-</code></pre>
-<p><strong>文章置顶</strong><br>在 <code>Front-Matter</code> 里设置 <code>pinned</code> 作为置顶参数，越大越靠前，默认为 0。</p>
+        <p>建设中…</p>
 
     </div>
     
