@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo学习笔记 | 星辰小站</title>
+    <title>Hexo使用手册 | 星辰小站</title>
     <meta name="author" content="Jimflty" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -156,7 +156,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Hexo学习笔记</h1>
+        <h1>Hexo使用手册</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -184,7 +184,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/Hexo/" style="color: #00bcd4">
+                <a href="/tags/Hexo/" style="color: #00a596">
                     Hexo
                 </a>
             </span>
@@ -196,14 +196,13 @@
     <div class="content" v-pre>
         <p>Hexo建站完毕，还需经过一定的美化达到观感上的满意。Hexo可进行美化的部分包括主题、背景，以及文档排版（layout）。Hexo初始主题已经非常简洁美观，仅需对背景、文档排版等进行美化即可。本文用于记录美化过程中发现和排除的问题，查看最终美化结果。</p>
 <hr>
+<h3 id="Hexo基础指令"><a href="#Hexo基础指令" class="headerlink" title="Hexo基础指令"></a>Hexo基础指令</h3><p><code>hexo new [file_name]</code> 创建新post<br><code>hexo g/generate</code> 创建实体文件<br><code>hexo s/server</code> 启动本地web服务(预览)<br><code>hexo d/deploy</code> 上传版本到云端</p>
+<p>纯粹是记录，才不是怕忘</p>
 <h2 id="自定义背景"><a href="#自定义背景" class="headerlink" title="自定义背景"></a>自定义背景</h2><p>根据<a target="_blank" rel="noopener" href="https://blog.juis.top/posts/c81197b5.Html">Hexo 自定义本地封面图</a>中提到的方法：</p>
 <ol>
-<li><p>图片的http链接</p>
-</li>
-<li><p>把图片放在<code>博客根目录/source/images</code></p>
-</li>
-<li><p>通过 abbrlink 和 assetimg 的方式（需要安装abbrlink&amp;&amp;asset-img）</p>
-</li>
+<li>图片的http链接</li>
+<li>把图片放在<code>博客根目录/source/images</code></li>
+<li>通过 abbrlink 和 assetimg 的方式（需要安装abbrlink&amp;&amp;asset-img）</li>
 </ol>
 <p>三种方式均可实现自定义背景，但考虑到http有内容替换的可能性，把心仪的图片保存到本地的方式更为稳妥且不用额外安装插件，因此选择采用<code>2</code>。</p>
 <p>由于距该教程已过去两年，Hexo文件结构已然发生变化，现在放置背景图片的目标文件夹为<code>根目录/public/css/images</code></p>
@@ -247,7 +246,7 @@
 </tr>
 <tr>
 <td align="left"><code>permalink</code></td>
-<td align="left">覆盖文章的永久链接. 永久链接应该以 <code>/</code> 或 <code>.html</code> 结尾</td>
+<td align="left">覆盖文章的永久链接. 永久链接应该以<code>/</code> 或 <code>.html</code> 结尾</td>
 <td align="left"><code>null</code></td>
 </tr>
 <tr>
