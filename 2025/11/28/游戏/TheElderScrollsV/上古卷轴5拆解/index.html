@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Categories: 编程 | 星辰小站</title>
+    <title>上古卷轴5拆解 | 星辰小站</title>
     <meta name="author" content="Jimflty" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -37,6 +37,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -150,14 +154,20 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="archives">
-    
-    <div class="categories-tags">
+            <div class="article">
+    <div>
+        <h1>上古卷轴5拆解</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/11/28
+        </span>
         
-        
-        
-        <span>
-            <a href="/categories/%E6%B8%B8%E6%88%8F/" style="background: #ff7d73">
+        <span class="category">
+            <a href="/categories/%E6%B8%B8%E6%88%8F/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
@@ -166,167 +176,42 @@
         </span>
         
         
-        
-        <span>
-            <a href="/categories/%E7%BC%96%E7%A8%8B/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                编程
-            </a>
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E4%B8%8A%E5%8F%A4%E5%8D%B7%E8%BD%B4/" style="color: #00bcd4">
+                    上古卷轴
+                </a>
+            </span>
+            
         </span>
-        
-        
-        
-        
-        
-        <span>
-            <a href="/categories/%E5%8A%A0%E5%AF%86%E8%B4%A7%E5%B8%81/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                加密货币
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E5%BF%83%E7%90%86/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                心理
-            </a>
-        </span>
-        
-        
-        
-        <span>
-            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" style="background: #00bcd4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                数据分析
-            </a>
-        </span>
-        
         
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2025/5/25</div>
-            <a href="/2025/05/25/%E7%BC%96%E7%A8%8B/MySQL/MySQL/">
-                <h3>MySQL学习笔记</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E7%BC%96%E7%A8%8B/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        编程
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/MySQL/" style="color: #ff7d73">
-                            MySQL
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <h1 id="潜行"><a href="#潜行" class="headerlink" title="潜行"></a>潜行</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本文中，我们把上古卷轴5中的潜行定义为：避免敌人进入战斗状态的一切行为。在潜行机制中，敌方AI大致可分为巡逻、搜寻、发现敌人三个状态，游戏中有特定的隐蔽度量表(Hidden Meter)来量化这一点。因此，潜行也可以换一种更加具体的表达方式：玩家使敌方AI维持在前两个阶段下的一切行为。</p>
+<h2 id="AI状态"><a href="#AI状态" class="headerlink" title="AI状态"></a>AI状态</h2><p>敌方AI发现玩家所使用的一套机制。我们假设敌方AI都是正常人，能够正常地视听活动，那么就与人一样的，应当有一个接收视听信号的范围（这个范围可视为无限），当玩家在该范围内触发特定事件时，AI便会进入搜寻状态。若AI已处于搜寻状态但在一段时间内为搜索到玩家时，便会返回到巡逻状态。</p>
+<p>逻辑简明图示：巡逻 -&gt; 搜寻 -&gt; 巡逻&#x2F;发现敌人</p>
+<h2 id="特定事件"><a href="#特定事件" class="headerlink" title="特定事件"></a>特定事件</h2><p>玩家下蹲即可减小敌人发现自己的概率，但即使下蹲并只是跟在敌方身后，也依旧会被发现，原因是玩家的行为伴随着噪声。这些噪声可能来源于玩家身上的盔甲、玩家释放的法术。除了噪音以外，攻击敌方也会使令其进入搜索状态。<br>因此特定事件即为：发出噪音、攻击敌方。</p>
+<hr>
+<p>以上均为未引入任何perk下的基本潜行机制，但由于游戏中的潜行perk的存在，使得潜行这一玩法在以上所表述的潜行框架内迎来显著加强。</p>
+<p>先从潜行perk说起，潜行perk大致可分为隐蔽能力和潜行下的战斗能力。</p>
+<p>隐蔽能力方面，提升玩家被发现难度，即增加敌方AI发现玩家所需的光源强度与噪音强度，通过这两点可实现游戏中敌方AI需要离玩家更近、光照更亮才能听到、看到玩家，看似玩家变得更为隐蔽了，实际上是敌人变得更盲聋。为进一步减少噪音，还需要从玩家身上的盔甲入手，因此有特定的减少盔甲噪音perk。</p>
+<p>因潜行下的战斗机会实际很少，玩家需观察敌人的一举一动，在合适的时机使出致命一击，潜行战斗能力旨在提高这一击的致命程度，加强方式也十分简单粗暴——提升潜行状态下攻击的伤害倍数。</p>
+<h2 id="潜行机制评价"><a href="#潜行机制评价" class="headerlink" title="潜行机制评价"></a>潜行机制评价</h2><p>结合环境作为潜行的判定条件，很大程度上提升了潜行的沉浸感，敌方AI不同状态的递进、循环赋予潜行以节奏。滚5的潜行已然具备较为全面的要素，但细节上处理得仍然不够。比如即使引入perk加强玩家的潜行能力与潜行中的战斗能力，两者却始终只是量变，并没有带来本质上的变化，尚且不说后期可以在敌人眼前潜行而不被发现这一看起来很逆天的操作，但这更像是数值上升到一定程度所产生的bug&#x2F;潜行机制中未被填补的漏洞，潜行始终没有迎来机制上的更新，使得玩家可以在潜行时做到那样行云流水而符合常理。另一方面，敌人在高潜行能力的玩家眼下简直像是待宰的羔羊，毫无还手之力，后期潜行玩法乏味枯燥，究其原因还是敌方AI不够完备智能。</p>
+
     </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2025/3/11</div>
-            <a href="/2025/03/11/%E7%BC%96%E7%A8%8B/Markdown/markdown/">
-                <h3>Markdown学习笔记</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E7%BC%96%E7%A8%8B/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        编程
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/Markdown/" style="color: #03a9f4">
-                            Markdown
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
     
-    <div class="timeline">
-        <div class="timeline-tail"></div>
-        <div class="timeline-content">
-            <div class="item-time">2025/3/10</div>
-            <a href="/2025/03/10/%E7%BC%96%E7%A8%8B/Hexo%E7%BE%8E%E5%8C%96/hexo%E7%BE%8E%E5%8C%96/">
-                <h3>Hexo使用手册</h3>
-            </a>
-            <div class="info">
-                
-                <span class="category">
-                    <a href="/categories/%E7%BC%96%E7%A8%8B/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        编程
-                    </a>
-                </span>
-                
-                
-                <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                    
-                    
-                    <span class="tag">
-                        
-                        <a href="/tags/Hexo/" style="color: #03a9f4">
-                            Hexo
-                        </a>
-                    </span>
-                    
-                </span>
-                
-            </div>
-        </div>
-    </div>
+    
+    
+    
+    
     
 </div>
 
@@ -358,6 +243,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
